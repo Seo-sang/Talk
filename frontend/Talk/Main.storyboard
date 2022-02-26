@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jbw-Bm-OFx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nQr-YG-3BU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,26 +9,80 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="p2v-GS-v9J">
+        <!--Login View-->
+        <scene sceneID="qrn-7H-Erq">
             <objects>
-                <navigationController id="Jbw-Bm-OFx" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6bJ-em-dCi">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
+                <viewController id="nQr-YG-3BU" customClass="LoginView" customModule="Talk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tKL-O8-xpg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Talk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpW-Iq-XL0">
+                                <rect key="frame" x="130" y="120" width="154" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ID" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9g-bW-PCf">
+                                <rect key="frame" x="60" y="322.5" width="294" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="PASSWORD" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gH9-gW-Gda">
+                                <rect key="frame" x="60" y="386.5" width="294" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWN-dI-lWR">
+                                <rect key="frame" x="60" y="450.5" width="294" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="로그인"/>
+                                <connections>
+                                    <action selector="didTapLoginButton:" destination="nQr-YG-3BU" eventType="touchUpInside" id="geO-Dm-N4p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdX-xw-LbU">
+                                <rect key="frame" x="60" y="511.5" width="294" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="회원가입"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LaA-wo-oay"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fpW-Iq-XL0" firstAttribute="top" secondItem="LaA-wo-oay" secondAttribute="top" constant="76" id="068-qw-Ztn"/>
+                            <constraint firstItem="fpW-Iq-XL0" firstAttribute="leading" secondItem="LaA-wo-oay" secondAttribute="leading" constant="130" id="6VF-uS-f5X"/>
+                            <constraint firstItem="LaA-wo-oay" firstAttribute="trailing" secondItem="SWN-dI-lWR" secondAttribute="trailing" constant="60" id="6pi-jY-TYV"/>
+                            <constraint firstItem="LaA-wo-oay" firstAttribute="trailing" secondItem="fpW-Iq-XL0" secondAttribute="trailing" constant="130" id="GG0-L3-vEE"/>
+                            <constraint firstItem="SWN-dI-lWR" firstAttribute="leading" secondItem="LaA-wo-oay" secondAttribute="leading" constant="60" id="L4R-FU-Kbe"/>
+                            <constraint firstItem="l9g-bW-PCf" firstAttribute="leading" secondItem="LaA-wo-oay" secondAttribute="leading" constant="60" id="LC3-Am-pyN"/>
+                            <constraint firstItem="fpW-Iq-XL0" firstAttribute="leading" secondItem="LaA-wo-oay" secondAttribute="leading" constant="130" id="PeO-FC-20P"/>
+                            <constraint firstItem="SWN-dI-lWR" firstAttribute="top" secondItem="gH9-gW-Gda" secondAttribute="bottom" constant="30" id="Xoj-y3-fem"/>
+                            <constraint firstItem="l9g-bW-PCf" firstAttribute="top" secondItem="fpW-Iq-XL0" secondAttribute="bottom" constant="168.5" id="Y2T-6f-dNH"/>
+                            <constraint firstItem="XdX-xw-LbU" firstAttribute="top" secondItem="SWN-dI-lWR" secondAttribute="bottom" constant="30" id="YMK-Z1-ISy"/>
+                            <constraint firstItem="LaA-wo-oay" firstAttribute="trailing" secondItem="XdX-xw-LbU" secondAttribute="trailing" constant="60" id="ZV5-UV-ISA"/>
+                            <constraint firstItem="XdX-xw-LbU" firstAttribute="leading" secondItem="LaA-wo-oay" secondAttribute="leading" constant="60" id="cJB-6U-den"/>
+                            <constraint firstItem="gH9-gW-Gda" firstAttribute="top" secondItem="l9g-bW-PCf" secondAttribute="bottom" constant="30" id="e9D-ub-t2H"/>
+                            <constraint firstItem="gH9-gW-Gda" firstAttribute="leading" secondItem="LaA-wo-oay" secondAttribute="leading" constant="60" id="nl2-ZI-vYc"/>
+                            <constraint firstItem="LaA-wo-oay" firstAttribute="trailing" secondItem="l9g-bW-PCf" secondAttribute="trailing" constant="60" id="oQK-Yj-6B7"/>
+                            <constraint firstItem="LaA-wo-oay" firstAttribute="trailing" secondItem="fpW-Iq-XL0" secondAttribute="trailing" constant="130" id="odn-Qs-eTl"/>
+                            <constraint firstItem="LaA-wo-oay" firstAttribute="trailing" secondItem="gH9-gW-Gda" secondAttribute="trailing" constant="60" id="zk5-2h-7hq"/>
+                        </constraints>
+                    </view>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Ehb-qW-b46"/>
+                        <outlet property="emailTextField" destination="l9g-bW-PCf" id="e8d-KV-0mX"/>
+                        <outlet property="loginButton" destination="SWN-dI-lWR" id="pJt-Bz-4SM"/>
+                        <outlet property="passwordTextField" destination="gH9-gW-Gda" id="2XY-W5-KHv"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YwT-JZ-0Ar" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3c4-CP-Fia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-77" y="283"/>
+            <point key="canvasLocation" x="-43" y="283"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="ViewController" customModule="Talk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ViewController" customModule="Talk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,7 +154,7 @@
             <objects>
                 <viewController id="4dh-bm-Uko" customClass="ChatWindowController" customModule="Talk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z4Z-cI-xX2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="BN0-dh-jk4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

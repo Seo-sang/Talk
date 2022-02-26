@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2631BD8D27C9F01C00448216 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2631BD8C27C9F01C00448216 /* LoginView.swift */; };
+		2631BD9127CA091D00448216 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2631BD9027CA091D00448216 /* UserModel.swift */; };
 		266D533A27C508C100381B13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D533927C508C100381B13 /* AppDelegate.swift */; };
 		266D533C27C508C100381B13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D533B27C508C100381B13 /* SceneDelegate.swift */; };
 		266D533E27C508C100381B13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266D533D27C508C100381B13 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2631BD8C27C9F01C00448216 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2631BD9027CA091D00448216 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		266D533627C508C100381B13 /* Talk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Talk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		266D533927C508C100381B13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		266D533B27C508C100381B13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 				266D533927C508C100381B13 /* AppDelegate.swift */,
 				266D533B27C508C100381B13 /* SceneDelegate.swift */,
 				266D533D27C508C100381B13 /* ViewController.swift */,
+				2631BD8C27C9F01C00448216 /* LoginView.swift */,
 				266D534527C508C100381B13 /* Assets.xcassets */,
 				266D535027C5093200381B13 /* Main.storyboard */,
 				266D534727C508C100381B13 /* LaunchScreen.storyboard */,
@@ -72,6 +77,7 @@
 				266D534227C508C100381B13 /* Talk.xcdatamodeld */,
 				266D535227C50BB100381B13 /* ChatList.swift */,
 				26C0D4B727C51EF200C1BA0E /* ChatWindowController.swift */,
+				2631BD9027CA091D00448216 /* UserModel.swift */,
 			);
 			path = Talk;
 			sourceTree = "<group>";
@@ -149,6 +155,8 @@
 			files = (
 				266D535327C50BB100381B13 /* ChatList.swift in Sources */,
 				266D533E27C508C100381B13 /* ViewController.swift in Sources */,
+				2631BD9127CA091D00448216 /* UserModel.swift in Sources */,
+				2631BD8D27C9F01C00448216 /* LoginView.swift in Sources */,
 				266D534427C508C100381B13 /* Talk.xcdatamodeld in Sources */,
 				266D533A27C508C100381B13 /* AppDelegate.swift in Sources */,
 				266D533C27C508C100381B13 /* SceneDelegate.swift in Sources */,
