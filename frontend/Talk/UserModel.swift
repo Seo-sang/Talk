@@ -11,12 +11,13 @@ final class UserModel {
     struct User {
         var email : String
         var password : String
+        var nickname : String
     }
     
     //사용자 목록
     var users: [User] = [
-        User(email: "tjtkdgus45@nate.com", password: "12345678"),
-        User(email: "royseo98@gmail.com", password: "12345678")
+        User(email: "tjtkdgus45@nate.com", password: "12345678", nickname: "seo"),
+        User(email: "royseo98@gmail.com", password: "12345678", nickname : "sanghyeon")
     ]
     
     //아이디 형식 검사

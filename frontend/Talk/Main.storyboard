@@ -45,6 +45,10 @@
                                 <rect key="frame" x="60" y="511.5" width="294" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="회원가입"/>
+                                <connections>
+                                    <action selector="SignUpButton:" destination="nQr-YG-3BU" eventType="touchUpInside" id="1aS-vM-p3o"/>
+                                    <action selector="didTapSignUpButton:" destination="nQr-YG-3BU" eventType="touchUpInside" id="tup-v9-Fjz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LaA-wo-oay"/>
@@ -73,6 +77,7 @@
                         <outlet property="emailTextField" destination="l9g-bW-PCf" id="e8d-KV-0mX"/>
                         <outlet property="loginButton" destination="SWN-dI-lWR" id="pJt-Bz-4SM"/>
                         <outlet property="passwordTextField" destination="gH9-gW-Gda" id="2XY-W5-KHv"/>
+                        <outlet property="signUpButton" destination="XdX-xw-LbU" id="rAL-Pc-bjc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3c4-CP-Fia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -148,6 +153,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="789.85507246376812" y="282.58928571428572"/>
+        </scene>
+        <!--Sign Up View-->
+        <scene sceneID="QSL-e8-kK1">
+            <objects>
+                <viewController storyboardIdentifier="SignUpView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dly-Sx-Fjs" customClass="SignUpView" customModule="Talk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HnA-nB-8Bp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxT-Si-cGL">
+                                <rect key="frame" x="0.0" y="94" width="414" height="44.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odk-Me-lhR">
+                                <rect key="frame" x="60" y="424.5" width="294" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="회원 가입"/>
+                                <connections>
+                                    <action selector="didTapSignUpButton:" destination="Dly-Sx-Fjs" eventType="touchUpInside" id="1Pe-qo-Apc"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ID" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QbX-Dj-t4g">
+                                <rect key="frame" x="60" y="168.5" width="294" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="PASSWORD" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eoi-Vn-fZu">
+                                <rect key="frame" x="60" y="232.5" width="294" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="NICKNAME" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Jm-IM-4tj">
+                                <rect key="frame" x="60" y="296.5" width="294" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="STATUS MESSAGE" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GUT-6W-9gO">
+                                <rect key="frame" x="60" y="360.5" width="294" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eJX-w3-zMt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eJX-w3-zMt" firstAttribute="trailing" secondItem="eoi-Vn-fZu" secondAttribute="trailing" constant="60" id="0nj-ei-n6B"/>
+                            <constraint firstItem="QbX-Dj-t4g" firstAttribute="top" secondItem="cxT-Si-cGL" secondAttribute="bottom" constant="30" id="18k-J2-b05"/>
+                            <constraint firstItem="Odk-Me-lhR" firstAttribute="top" secondItem="GUT-6W-9gO" secondAttribute="bottom" constant="30" id="9Zn-Wy-NAG"/>
+                            <constraint firstItem="cxT-Si-cGL" firstAttribute="leading" secondItem="eJX-w3-zMt" secondAttribute="leading" id="CW1-Q2-HrD"/>
+                            <constraint firstItem="eoi-Vn-fZu" firstAttribute="top" secondItem="QbX-Dj-t4g" secondAttribute="bottom" constant="30" id="D3i-nZ-Fgn"/>
+                            <constraint firstItem="GUT-6W-9gO" firstAttribute="top" secondItem="2Jm-IM-4tj" secondAttribute="bottom" constant="30" id="H8w-VP-FdF"/>
+                            <constraint firstItem="GUT-6W-9gO" firstAttribute="leading" secondItem="eJX-w3-zMt" secondAttribute="leading" constant="60" id="I0Y-7j-TnA"/>
+                            <constraint firstItem="eJX-w3-zMt" firstAttribute="trailing" secondItem="GUT-6W-9gO" secondAttribute="trailing" constant="60" id="JhJ-Up-G2y"/>
+                            <constraint firstItem="eoi-Vn-fZu" firstAttribute="leading" secondItem="eJX-w3-zMt" secondAttribute="leading" constant="60" id="KDs-uf-P5B"/>
+                            <constraint firstItem="2Jm-IM-4tj" firstAttribute="leading" secondItem="eJX-w3-zMt" secondAttribute="leading" constant="60" id="VtC-DD-ZeF"/>
+                            <constraint firstItem="eJX-w3-zMt" firstAttribute="trailing" secondItem="2Jm-IM-4tj" secondAttribute="trailing" constant="60" id="cjo-5Q-qb1"/>
+                            <constraint firstItem="QbX-Dj-t4g" firstAttribute="leading" secondItem="eJX-w3-zMt" secondAttribute="leading" constant="60" id="esO-as-Hcx"/>
+                            <constraint firstItem="2Jm-IM-4tj" firstAttribute="top" secondItem="eoi-Vn-fZu" secondAttribute="bottom" constant="30" id="fxw-VN-MvH"/>
+                            <constraint firstItem="cxT-Si-cGL" firstAttribute="trailing" secondItem="eJX-w3-zMt" secondAttribute="trailing" id="hMo-43-exe"/>
+                            <constraint firstItem="cxT-Si-cGL" firstAttribute="top" secondItem="eJX-w3-zMt" secondAttribute="top" constant="50" id="nzk-3H-BdI"/>
+                            <constraint firstItem="Odk-Me-lhR" firstAttribute="leading" secondItem="eJX-w3-zMt" secondAttribute="leading" constant="60" id="qa1-4H-3nX"/>
+                            <constraint firstItem="eJX-w3-zMt" firstAttribute="trailing" secondItem="Odk-Me-lhR" secondAttribute="trailing" constant="60" id="sgq-PE-qds"/>
+                            <constraint firstItem="eJX-w3-zMt" firstAttribute="trailing" secondItem="QbX-Dj-t4g" secondAttribute="trailing" constant="60" id="wxj-J8-Z13"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="IdTextField" destination="QbX-Dj-t4g" id="XR4-ta-aJf"/>
+                        <outlet property="NicknameTextField" destination="2Jm-IM-4tj" id="hjQ-fR-uWP"/>
+                        <outlet property="PwTextField" destination="eoi-Vn-fZu" id="np2-2M-1LK"/>
+                        <outlet property="SignUpButton" destination="Odk-Me-lhR" id="jLg-mQ-oot"/>
+                        <outlet property="StatusmsgTextField" destination="GUT-6W-9gO" id="wT9-6L-Qxf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnw-or-QHi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.85507246376812" y="976.33928571428567"/>
         </scene>
         <!--Chat Window Controller-->
         <scene sceneID="bkk-UF-eVf">

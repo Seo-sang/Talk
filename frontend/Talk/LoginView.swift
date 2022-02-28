@@ -12,6 +12,7 @@ class LoginView : UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     
     var userModel = UserModel()
     
@@ -127,5 +128,11 @@ class LoginView : UIViewController {
         else if passwordTextField.isFirstResponder {
             loginButton.becomeFirstResponder()
         }
+    }
+    @IBAction func didTapSignUpButton(_ sender: UIButton) {
+        let signupVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpView")
+        signupVC?.modalTransitionStyle = .coverVertical
+        signupVC?.modalPresentationStyle = .automatic
+        self.present(signupVC!, animated: true, completion: nil)
     }
 }

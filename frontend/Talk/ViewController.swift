@@ -30,10 +30,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         //let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         //let controller = storyboard.instantiateViewController(withIdentifier: "ChatWindowController") as! ChatWindowController
         
-        
-        
     }
-    
     
     //세그웨이 방법
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
