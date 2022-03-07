@@ -11,7 +11,7 @@ final class UserModel {
     struct User {
         var email : String
         var password : String
-        var nickname : String   
+        var nickname : String
     }
     
     //사용자 목록
