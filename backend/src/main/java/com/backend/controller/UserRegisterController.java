@@ -41,10 +41,10 @@ public class UserRegisterController {
 
         return "redirect:/user/login";
     }
-
+/*
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login() throws Exception {
         System.out.println("login worked");
         return "/user/login";
-    }
+    }*/
 }

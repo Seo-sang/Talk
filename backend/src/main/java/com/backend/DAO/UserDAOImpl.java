@@ -1,5 +1,6 @@
 package com.backend.DAO;
 
+import com.backend.DTO.LoginDTO;
 import com.backend.DTO.UserDTO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
@@ -15,5 +16,10 @@ public class UserDAOImpl implements UserDAO{
     public void register(UserDTO userDTO) throws Exception {
         System.out.println("userDAO register worked");
         users.add(userDTO);
+    }
+
+    @Override
+    public UserDTO login(LoginDTO loginDTO) throws Exception {
+        return null;
     }
 }

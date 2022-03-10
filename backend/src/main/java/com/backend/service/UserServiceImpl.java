@@ -1,6 +1,7 @@
 package com.backend.service;
 
 import com.backend.DAO.UserDAO;
+import com.backend.DTO.LoginDTO;
 import com.backend.DTO.UserDTO;
 import org.springframework.stereotype.Service;
 
@@ -20,5 +21,10 @@ public class UserServiceImpl implements UserService{
     public void register(UserDTO userDTO) throws Exception {
         System.out.println("userService register worked");
         userDAO.register(userDTO);
+    }
+
+    @Override
+    public UserDTO login(LoginDTO loginDTO) throws Exception {
+        return userDAO.login(loginDTO);
     }
 }
