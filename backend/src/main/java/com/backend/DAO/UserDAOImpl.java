@@ -9,10 +9,11 @@ import java.util.ArrayList;
 
 @Repository
 public class UserDAOImpl implements UserDAO{
-    ArrayList<UserDTO> users;
+    ArrayList<UserDTO> users = new ArrayList<>();
 
     @Override
     public void register(UserDTO userDTO) throws Exception {
+        System.out.println("userDAO register worked");
         users.add(userDTO);
     }
 }

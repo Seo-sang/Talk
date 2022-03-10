@@ -38,4 +38,13 @@ public class UserDTO {
         this.statusMsg = statusMsg;
     }
 
+    @Override
+    public String toString() {
+        return "UserDTO{" +
+                "email='" + email + '\'' +
+                ", passwd='" + passwd + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", statusMsg='" + statusMsg + '\'' +
+                '}';
+    }
 }

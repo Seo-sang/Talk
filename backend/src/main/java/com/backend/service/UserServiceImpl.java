@@ -18,6 +18,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public void register(UserDTO userDTO) throws Exception {
+        System.out.println("userService register worked");
         userDAO.register(userDTO);
     }
 }
