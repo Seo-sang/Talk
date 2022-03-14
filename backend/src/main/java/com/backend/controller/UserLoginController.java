@@ -27,7 +27,6 @@ public class UserLoginController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginGET(@ModelAttribute("loginDTO") LoginDTO loginDTO) {
-        System.out.println("login page");
         return "/user/login";
     }
 
@@ -38,7 +37,7 @@ public class UserLoginController {
         if(userDTO == null || !BCrypt.checkpw(loginDTO.getPasswd(), userDTO.getPasswd())) {
             return;
         }
-
+        System.out.println("login success");
         model.addAttribute("user", userDTO);
     }
 }

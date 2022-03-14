@@ -6,20 +6,25 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import javax.inject.Inject;
-import java.util.ArrayList;
 
 @Repository
 public class UserDAOImpl implements UserDAO{
-    ArrayList<UserDTO> users = new ArrayList<>();
+    private static final String NAMESPACE = "com.backend.mappers.user.UserMapper";
+    private final SqlSession sqlSession;
+
+    @Inject
+    public UserDAOImpl(SqlSession sqlSession) {
+        this.sqlSession = sqlSession;
+    }
 
     @Override
     public void register(UserDTO userDTO) throws Exception {
         System.out.println("userDAO register worked");
-        users.add(userDTO);
+        sqlSession.insert(NAMESPACE + ".register", userDTO);
     }
 
     @Override
     public UserDTO login(LoginDTO loginDTO) throws Exception {
-        return null;
+        return sqlSession.selectOne(NAMESPACE + ".login", loginDTO);
     }
 }
